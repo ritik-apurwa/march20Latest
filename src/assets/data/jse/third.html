@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="language">
+        <li>cd</li>
+      </ul>
+</body>
+<script>
+     function addLanguage(languageName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${languageName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("javascript");
+    addLanguage("ruby-on-rails");
+
+    function addOptiLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+
+    addOptiLang("shyam");
+
+    // edit
+    const secondLang = document.querySelector("li:nth-child(2)");
+
+    // secondLang.innerHTML = "moho"
+   const newli  = document.createElement("li");
+   newli.textContent = "mohdfo";
+   secondLang.replaceWith(newli)
+
+   // edit 2 
+
+   const firstLang = document.querySelector("li:nth-child(1)");
+   firstLang.outerHTML = "<li>Typescript<li/>"
+
+    // remove 
+
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove(); 
+</script>
+   
+</html>
